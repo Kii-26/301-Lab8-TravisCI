@@ -14,13 +14,13 @@ android:
   components:
     #Android SDK Tools
     - tools
-    - platform_tools
+    - platform-tools
     
     #BuildTools version
     - build-tools-$ANDROID_BUILD_TOOLS_VERSION
     
     - android-$ANDROID_API_LEVEL
-    - andoroid-$ANDROID_EMU_API_LEVEL
+    - android-$ANDROID_EMU_API_LEVEL
 
     # Additional components
     - extra-google-google_play_services
