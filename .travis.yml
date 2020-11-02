@@ -37,13 +37,13 @@ android:
 
 before_install:
   - yes | sdkmanager "platforms;android-$ANDROID_EMU_API_LEVEL"
-  - yes | sdkmanager "platforms;android-$$ANDROID_API_LEVEL"
+  - yes | sdkmanager "platforms;android-$ANDROID_API_LEVEL"
 
 before_script:
   - chmod +x gradlew
   
   #Emulator instance
-  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_api/$ANDROID_ABI
+  - echo no | android create avd --force -n test -t android-$ANDROID_EMU_API_LEVEL --abi google_apis/$ANDROID_ABI
   - emulater =adv test -no-window & #android-wait-fpr emulator
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
